@@ -27,7 +27,7 @@ namespace WinFormsApp3
             Regristration regris = new Regristration();
             Hide();
             regris.ShowDialog();
-            
+            Close();
         }
     }
 }

@@ -23,9 +23,10 @@ namespace WinFormsApp3
             Customer first = new Customer(name, Alamat, TipeCar);
             
             BookingForm booking = new BookingForm(name, Alamat, TipeCar);
-          
+            Hide();
             
             booking.ShowDialog();
+            Close();
 
         }
     }
