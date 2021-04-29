@@ -15,34 +15,34 @@ namespace WinFormsApp3
     
     class Customer
     {
-        private string name;
-        private string alamat;
-        private string TypeCar;
+        
+        public string TypeCar { get; set; }
+      
         private PaymentMethod Cash = new PaymentMethod();//Implementasi Hubungan Composition karena Class Customer
                                                          //// Memiliki class PaymentMethod dan hubunganyan sangat erat
 
-        public Customer(string _name, string Alamat,string typeCar)
-        {
-            name = _name;
-            alamat = Alamat;
-            TypeCar = typeCar;
-            
-        }
+       
         public string Name
         {
-            get { return name; }
-            set { Name = value; }
+            get;set;
            
         }
         public string _alamat
         {
-            get { return alamat; }
+            get;set;
 
         }
         public void GetDetails()
         {
-            Console.WriteLine(name);
-            Console.WriteLine(alamat);
+            Console.WriteLine(Name);
+            Console.WriteLine(_alamat);
+        }
+        public string Password
+        {get;set;
+        }
+        public string Username
+        {
+            get;set;
         }
 
 
@@ -77,7 +77,13 @@ namespace WinFormsApp3
 
     }
 
+    public class dateTime
+    {
+        public string Time { get; set; }
 
+
+
+    }
 
     class CustomerService
     {

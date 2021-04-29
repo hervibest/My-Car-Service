@@ -36,6 +36,8 @@ namespace WinFormsApp3
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblConnectionStatus = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -44,6 +46,7 @@ namespace WinFormsApp3
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -54,7 +57,7 @@ namespace WinFormsApp3
             // button1
             // 
             this.button1.Image = global::WinFormsApp3.Properties.Resources.registration_icon_png_225110_free_icons_library_register_png_498_4981;
-            this.button1.Location = new System.Drawing.Point(112, 27);
+            this.button1.Location = new System.Drawing.Point(34, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 73);
             this.button1.TabIndex = 0;
@@ -110,11 +113,32 @@ namespace WinFormsApp3
             this.label2.TabIndex = 3;
             this.label2.Text = "Selamat Datang\r\ndi Program \r\nBook Service";
             // 
+            // lblConnectionStatus
+            // 
+            this.lblConnectionStatus.AutoSize = true;
+            this.lblConnectionStatus.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblConnectionStatus.Location = new System.Drawing.Point(12, 426);
+            this.lblConnectionStatus.Name = "lblConnectionStatus";
+            this.lblConnectionStatus.Size = new System.Drawing.Size(83, 15);
+            this.lblConnectionStatus.TabIndex = 4;
+            this.lblConnectionStatus.Text = "Status Koneksi";
+            // 
+            // button2
+            // 
+            this.button2.Image = global::WinFormsApp3.Properties.Resources.registration_icon_png_225110_free_icons_library_register_png_498_4981;
+            this.button2.Location = new System.Drawing.Point(210, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(170, 73);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 450);
+            this.Controls.Add(this.lblConnectionStatus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -122,6 +146,7 @@ namespace WinFormsApp3
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Book Service 0.1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -141,6 +166,8 @@ namespace WinFormsApp3
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblConnectionStatus;
+        private System.Windows.Forms.Button button2;
     }
 }
 

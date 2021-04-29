@@ -5,6 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
 
 namespace WinFormsApp3
 {
@@ -14,6 +17,12 @@ namespace WinFormsApp3
         {
             InitializeComponent();
         }
+        IFirebaseConfig fcon = new FirebaseConfig()
+        {
+            AuthSecret = "DloYF0U5Z2AsSZWD8J23D4vgIqt3f6KvhZfvX1oj",
+            BasePath = "https://my-car-service-59f5f-default-rtdb.firebaseio.com/"
+        };
+        IFirebaseClient client;
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -158,7 +167,7 @@ namespace WinFormsApp3
                     MessageBox.Show("Anda belum memilih herga");
 
                 }
-
+                //var setter = client.Set("Car Details" + Car3._Type, Car3);
             }
             
 

@@ -36,9 +36,9 @@ namespace WinFormsApp3
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Nama = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -121,25 +121,6 @@ namespace WinFormsApp3
             this.panel2.Size = new System.Drawing.Size(380, 426);
             this.panel2.TabIndex = 2;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Historic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(9, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(370, 74);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Regristasi anda telah berhasil \r\n\r\n";
-            // 
-            // Nama
-            // 
-            this.Nama.AutoSize = true;
-            this.Nama.Font = new System.Drawing.Font("Segoe UI Historic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Nama.Location = new System.Drawing.Point(0, 102);
-            this.Nama.Name = "Nama";
-            this.Nama.Size = new System.Drawing.Size(0, 37);
-            this.Nama.TabIndex = 1;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -150,6 +131,24 @@ namespace WinFormsApp3
             this.label4.TabIndex = 3;
             this.label4.Text = "Silakan Pesan \r\nJadwal Servis Anda";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Historic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(9, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 37);
+            this.label3.TabIndex = 2;
+            // 
+            // Nama
+            // 
+            this.Nama.AutoSize = true;
+            this.Nama.Font = new System.Drawing.Font("Segoe UI Historic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Nama.Location = new System.Drawing.Point(0, 102);
+            this.Nama.Name = "Nama";
+            this.Nama.Size = new System.Drawing.Size(0, 37);
+            this.Nama.TabIndex = 1;
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -159,6 +158,7 @@ namespace WinFormsApp3
             this.Controls.Add(this.panel1);
             this.Name = "BookingForm";
             this.Text = "BookingForm";
+            this.Load += new System.EventHandler(this.BookingForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

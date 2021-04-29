@@ -37,9 +37,9 @@ namespace WinFormsApp3
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.txtTipeCar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PasswordBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UserID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,9 +59,9 @@ namespace WinFormsApp3
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.txtTipeCar);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.PasswordBox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.UserID);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label1);
@@ -135,12 +135,12 @@ namespace WinFormsApp3
             this.label4.TabIndex = 7;
             this.label4.Text = "Tipe Mobil";
             // 
-            // textBox3
+            // PasswordBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(86, 131);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(255, 23);
-            this.textBox3.TabIndex = 6;
+            this.PasswordBox.Location = new System.Drawing.Point(86, 131);
+            this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.Size = new System.Drawing.Size(255, 23);
+            this.PasswordBox.TabIndex = 6;
             // 
             // label3
             // 
@@ -151,12 +151,12 @@ namespace WinFormsApp3
             this.label3.TabIndex = 5;
             this.label3.Text = "Password :";
             // 
-            // textBox2
+            // UserID
             // 
-            this.textBox2.Location = new System.Drawing.Point(86, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(255, 23);
-            this.textBox2.TabIndex = 4;
+            this.UserID.Location = new System.Drawing.Point(86, 86);
+            this.UserID.Name = "UserID";
+            this.UserID.Size = new System.Drawing.Size(255, 23);
+            this.UserID.TabIndex = 4;
             // 
             // label2
             // 
@@ -221,6 +221,7 @@ namespace WinFormsApp3
             this.Controls.Add(this.button1);
             this.Name = "Regristration";
             this.Text = "Regristasi";
+            this.Load += new System.EventHandler(this.Regristration_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -238,9 +239,9 @@ namespace WinFormsApp3
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox txtTipeCar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PasswordBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UserID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
