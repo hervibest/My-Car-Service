@@ -29,7 +29,9 @@ namespace WinFormsApp3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,7 +39,7 @@ namespace WinFormsApp3
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblConnectionStatus = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,10 +56,20 @@ namespace WinFormsApp3
             this.panel1.Size = new System.Drawing.Size(802, 100);
             this.panel1.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(197, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(170, 73);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.Image = global::WinFormsApp3.Properties.Resources.registration_icon_png_225110_free_icons_library_register_png_498_4981;
-            this.button1.Location = new System.Drawing.Point(34, 27);
+            this.button1.Location = new System.Drawing.Point(21, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 73);
             this.button1.TabIndex = 0;
@@ -123,21 +135,23 @@ namespace WinFormsApp3
             this.lblConnectionStatus.TabIndex = 4;
             this.lblConnectionStatus.Text = "Status Koneksi";
             // 
-            // button2
+            // label3
             // 
-            this.button2.Image = global::WinFormsApp3.Properties.Resources.registration_icon_png_225110_free_icons_library_register_png_498_4981;
-            this.button2.Location = new System.Drawing.Point(210, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 73);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(21, 272);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(185, 56);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Silakan tekan login \r\njika telah mendaftar";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblConnectionStatus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -168,6 +182,7 @@ namespace WinFormsApp3
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblConnectionStatus;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
