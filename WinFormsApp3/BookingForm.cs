@@ -51,7 +51,7 @@ namespace WinFormsApp3
 
 
             };
-            var setter = client.Set("test", time);
+            var setter = client.Set($"Username/{LoginForm.Username}/"+ "Waktu pemesanan",time);
             ServiceSelectionForm servisform = new ServiceSelectionForm();
             Hide();
             MessageBox.Show("Anda berhasil memesan waktu servis");

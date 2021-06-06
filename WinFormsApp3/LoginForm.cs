@@ -12,6 +12,8 @@ namespace WinFormsApp3
 {
     public partial class LoginForm : Form
     {
+
+        public static string Username;
         public LoginForm()
         {
             InitializeComponent();
@@ -41,10 +43,13 @@ namespace WinFormsApp3
                 Customer User = result1.ResultAs<Customer>();
                 if (UserID.Text == User.Username && PasswordText.Text == User.Password)
                 {
+                    Username = User.Username;
                     BookingForm booking = new BookingForm(User.Username, User._alamat, User.TypeCar);
                     MessageBox.Show("Anda telah berhasil login");
                     Close();
                     booking.ShowDialog();
+                
+
                     
 
                 }
@@ -56,11 +61,11 @@ namespace WinFormsApp3
                 {
                     MessageBox.Show("Anda belum mendaftarkan diri");
                 }
-                
-                
+                Username = User.Username;
 
-            
-          
+
+
+
 
         }
 

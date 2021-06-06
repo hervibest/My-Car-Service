@@ -16,6 +16,17 @@ namespace WinFormsApp3
         public ServiceSelectionForm()
         {
             InitializeComponent();
+            try
+            {
+
+                client = new FireSharp.FirebaseClient(fcon);
+
+
+            }
+            catch
+            {
+                MessageBox.Show("There was problem in the internet");
+            }
         }
         IFirebaseConfig fcon = new FirebaseConfig()
         {
@@ -26,7 +37,7 @@ namespace WinFormsApp3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            LoginForm form2 = new LoginForm();
             
             if (comboBox4.Text == "Racing")
             {
@@ -169,7 +180,17 @@ namespace WinFormsApp3
                 }
                 //var setter = client.Set("Car Details" + Car3._Type, Car3);
             }
-            
+            string jenismobil = comboBox4.Text;
+            string jenisservis = label2.Text;
+            string harga = label5.Text;
+            MessageBox.Show($"{LoginForm.Username}");
+            Cars mobil = new Cars()
+            {
+                Jenis = jenisservis,
+                JenisMobil = jenismobil,
+                PerkiraanHarga = harga
+            };
+            var setter = client.Set($"Username/{LoginForm.Username}/" + "Jenis Mobil", mobil );
 
         }
 

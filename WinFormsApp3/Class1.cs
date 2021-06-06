@@ -93,12 +93,12 @@ namespace WinFormsApp3
     }
 
 
-    abstract class Car//menerapkan Abstraction,Dependency, Encapsulation  serta PolyMorphism
+     class Car//menerapkan Abstraction,Dependency, Encapsulation  serta PolyMorphism
     {
         private string type;//properties
         private double HP;//properties
         private double years;//properties
-        public abstract void GetDetails();//akan dioverride di class anak sehingga menerapkan Polymorphism
+        public virtual void GetDetails() { }//akan dioverride di class anak sehingga menerapkan Polymorphism
         
     
 
@@ -173,7 +173,12 @@ namespace WinFormsApp3
 
 
     }
-
+    public class Cars
+    {
+        public string Jenis;
+        public string PerkiraanHarga;
+        public string JenisMobil;
+    }
     sealed class Type2Car : Car, ServiceSelection
     {
         private double EstimatedPrice;
