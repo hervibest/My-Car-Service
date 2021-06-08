@@ -13,10 +13,12 @@ namespace WinFormsApp3
     public partial class LoginForm : Form
     {
 
-        public static string Username;
+        public static string Username { get; set; } 
         public LoginForm()
         {
             InitializeComponent();
+            
+            PasswordText.PasswordChar = '\u25CF';
         }
         IFirebaseConfig fcon = new FirebaseConfig()
         {
@@ -44,7 +46,7 @@ namespace WinFormsApp3
                 if (UserID.Text == User.Username && PasswordText.Text == User.Password)
                 {
                     Username = User.Username;
-                    BookingForm booking = new BookingForm(User.Username, User._alamat, User.TypeCar);
+                    BookingForm booking = new BookingForm();
                     MessageBox.Show("Anda telah berhasil login");
                     Close();
                     booking.ShowDialog();

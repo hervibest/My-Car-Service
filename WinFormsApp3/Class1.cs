@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace WinFormsApp3
 {
-    class PaymentMethod
-        //Class yang memiliki hubungan composition dengan customer
-    {
-        private bool Cash;
-        private bool Transfer;
-
-    }
+    
     
     
     class Customer
@@ -18,9 +10,7 @@ namespace WinFormsApp3
         
         public string TypeCar { get; set; }
       
-        private PaymentMethod Cash = new PaymentMethod();//Implementasi Hubungan Composition karena Class Customer
-                                                         //// Memiliki class PaymentMethod dan hubunganyan sangat erat
-
+        
        
         public string Name
         {
@@ -50,25 +40,20 @@ namespace WinFormsApp3
     class Booking
     {
 
-        private DateTime dt;
+        
         private string _GarageSelection;
-        public Booking(DateTime _dt, String _garageselection)
-        {
-            dt = _dt;
-            _GarageSelection = _garageselection;
-        }
-       
+        
         public string _garageSelection
         {
             get { return _GarageSelection; }
-            set { _garageSelection = value; }
+            set { _GarageSelection = value; }
             //the garage can be change anytime
 
         }
     }
 
 
-    interface ServiceSelection
+    interface IServiceSelection
     {
         double QuickService(double _hp, double _years);
         double FullService(double _hp, double _years);
@@ -85,13 +70,7 @@ namespace WinFormsApp3
 
     }
 
-    class CustomerService
-    {
-        private string name;
-        private string ID;
-
-    }
-
+  
 
      class Car//menerapkan Abstraction,Dependency, Encapsulation  serta PolyMorphism
     {
@@ -110,7 +89,7 @@ namespace WinFormsApp3
           
 
         }
-        public string _Type
+        public string Type
         {
             get { return type; }
 
@@ -126,7 +105,7 @@ namespace WinFormsApp3
         }
 
     }
-    sealed class Type1Car : Car, ServiceSelection
+    sealed class Type1Car : Car, IServiceSelection
         //menerapkan Liskov, Inheritance, Interface
     {
         private double HPtotal;
@@ -167,7 +146,7 @@ namespace WinFormsApp3
 
         public override void GetDetails()
         {
-            Console.WriteLine("Tipe mobil adalah :" + _Type + "Tahun pembuatan mobil adalah " + Years+ "Total HP dari mobil ini adalah " + GetMaxHP());
+            Console.WriteLine("Tipe mobil adalah :" + Type + "Tahun pembuatan mobil adalah " + Years+ "Total HP dari mobil ini adalah " + GetMaxHP());
 
         }
 
@@ -179,7 +158,7 @@ namespace WinFormsApp3
         public string PerkiraanHarga;
         public string JenisMobil;
     }
-    sealed class Type2Car : Car, ServiceSelection
+    sealed class Type2Car : Car, IServiceSelection
     {
         private double EstimatedPrice;
         public Type2Car(string type, double HP, double years) : base(type, HP, years)
@@ -210,12 +189,12 @@ namespace WinFormsApp3
         }
         public override void GetDetails()
         {
-            Console.WriteLine("Tipe mobil adalah :" + _Type + "Tahun pembuatan mobil adalah " + Years + "Total HP dari mobil ini adalah " + Hp);
+            Console.WriteLine("Tipe mobil adalah :" + Type + "Tahun pembuatan mobil adalah " + Years + "Total HP dari mobil ini adalah " + Hp);
 
         }
 
     }
-    sealed class Type3Car : Car, ServiceSelection
+    sealed class Type3Car : Car, IServiceSelection
     {
         private double EstimatedPrice;
         public Type3Car(string type, double HP, double years) : base(type, HP, years)
@@ -246,7 +225,7 @@ namespace WinFormsApp3
         }
         public override void GetDetails()
         {
-            Console.WriteLine("Tipe mobil adalah :" + _Type + "Tahun pembuatan mobil adalah " + Years + "Total HP dari mobil ini adalah " + Hp);
+            Console.WriteLine("Tipe mobil adalah :" + Type + "Tahun pembuatan mobil adalah " + Years + "Total HP dari mobil ini adalah " + Hp);
 
         }
     }

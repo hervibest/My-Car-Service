@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 using FireSharp.Config;
-using FireSharp.Response;
+
 using FireSharp.Interfaces;
 
 namespace WinFormsApp3
@@ -15,7 +10,7 @@ namespace WinFormsApp3
     public partial class BookingForm : Form
     {
         
-        public BookingForm(string name, string alamat, string tipecar)
+        public BookingForm()
         {
            
             InitializeComponent();
@@ -43,7 +38,7 @@ namespace WinFormsApp3
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             dateTime time = new dateTime()
             {

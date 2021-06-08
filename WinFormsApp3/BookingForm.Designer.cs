@@ -33,7 +33,7 @@ namespace WinFormsApp3
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@ namespace WinFormsApp3
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.Button1);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Location = new System.Drawing.Point(408, 12);
             this.panel1.Name = "panel1";
@@ -87,15 +87,15 @@ namespace WinFormsApp3
             this.label1.TabIndex = 2;
             this.label1.Text = "Book the time";
             // 
-            // button1
+            // Button1
             // 
-            this.button1.Location = new System.Drawing.Point(82, 169);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 46);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Pesan";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Button1.Location = new System.Drawing.Point(82, 169);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(116, 46);
+            this.Button1.TabIndex = 1;
+            this.Button1.Text = "Pesan";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // dateTimePicker1
             // 
@@ -173,7 +173,7 @@ namespace WinFormsApp3
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Nama;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;

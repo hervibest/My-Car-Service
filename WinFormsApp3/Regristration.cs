@@ -17,6 +17,8 @@ namespace WinFormsApp3
         public Regristration()
         {
             InitializeComponent();
+           
+            PasswordBox.PasswordChar = '\u25CF';
         }
         IFirebaseConfig fcon = new FirebaseConfig()
         {
@@ -43,12 +45,12 @@ namespace WinFormsApp3
             };
            
             MessageBox.Show("Anda berhasil melakukan regristasi");
-             
-            
-            BookingForm booking = new BookingForm(name, Alamat, TipeCar);
+
+
+            LoginForm form = new LoginForm();
             Hide();
             var setter = client.Set("Username/" + UserID.Text, first);
-            booking.ShowDialog();
+            form.ShowDialog();
             Close();
 
         }

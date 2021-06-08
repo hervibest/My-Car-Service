@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+
 using System.Windows.Forms;
 using FireSharp.Config;
-using FireSharp.Response;
+
 using FireSharp.Interfaces;
 
 namespace WinFormsApp3
@@ -37,7 +33,7 @@ namespace WinFormsApp3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LoginForm form2 = new LoginForm();
+            
             
             if (comboBox4.Text == "Racing")
             {
@@ -183,7 +179,7 @@ namespace WinFormsApp3
             string jenismobil = comboBox4.Text;
             string jenisservis = label2.Text;
             string harga = label5.Text;
-            MessageBox.Show($"{LoginForm.Username}");
+            
             Cars mobil = new Cars()
             {
                 Jenis = jenisservis,
